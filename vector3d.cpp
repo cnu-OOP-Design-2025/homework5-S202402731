@@ -8,11 +8,11 @@ Vector3D::Vector3D(double x, double y, double z) : x(x), y(y), z(z) {}
 
 // ===== 멤버 연산자 =====
 Vector3D Vector3D::operator+(const Vector3D& v) const {
-    return Vector3D(x + v.x, y + v.y, z + v.z);
+    return Vector3D(x + v.x, y + v.y, z + v.z); // 벡터 덧셈: (x1, y1, z1) + (x2, y2, z2) = (x1+x2, y1+y2, z1+z2)
 }
 
 Vector3D Vector3D::operator-(const Vector3D& v) const {
-    return Vector3D(x - v.x, y - v.y, z - v.z);
+    return Vector3D(x - v.x, y - v.y, z - v.z); // 벡터 뺄셈: (x1, y1, z1) - (x2, y2, z2) = (x1−x2, y1−y2, z1−z2)
 }
 
 Vector3D Vector3D::operator*(const Vector3D& v) const {
@@ -24,11 +24,11 @@ Vector3D Vector3D::operator*(const Vector3D& v) const {
 }
 
 Vector3D Vector3D::operator*(double scalar) const {
-    return Vector3D(x * scalar, y * scalar, z * scalar);
+    return Vector3D(x * scalar, y * scalar, z * scalar); // 스칼라 곱: (x, y, z) * c = (x*c, y*c, z*c)
 }
 
 Vector3D Vector3D::operator/(double scalar) const {
-    return Vector3D(x / scalar, y / scalar, z / scalar);
+    return Vector3D(x / scalar, y / scalar, z / scalar); // 스칼라 나눗셈: (x, y, z) / c = (x/c, y/c, z/c)
 }
 
 Vector3D Vector3D::operator-() const {
